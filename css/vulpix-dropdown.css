@@ -1,0 +1,123 @@
+/* ------------------------
+   Estilos básicos del dropdown
+------------------------ */
+
+:root {
+  --color-primary: #007bff;
+  --color-primary-hover: #0056b3;
+  --color-bg: #ffffff;
+  --color-text: #333333;
+}
+
+body.dark {
+  --color-primary: #66b2ff;
+  --color-primary-hover: #3399ff;
+  --color-bg-dark: #333333;
+  --color-text-dark: #f1f1f1;
+}
+
+.navbar {
+  background-color: var(--color-bg);
+  padding: 1rem;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-item a:hover {
+  color: var(--color-primary);
+}
+
+/* ------------------------
+     Estilos del Dropdown
+  ------------------------ */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-bg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  min-width: 150px;
+  z-index: 10;
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  display: block;
+  color: var(--color-text);
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.3rem 0;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+/* ------------------------
+     Modo Oscuro
+  ------------------------ */
+body.dark .navbar {
+  background-color: var(--color-bg-dark);
+}
+
+body.dark .navbar-item a {
+  color: var(--color-text-dark);
+}
+
+body.dark .navbar-item a:hover {
+  color: var(--color-primary-dark);
+}
+
+body.dark .dropdown-menu {
+  background-color: var(--color-bg-dark);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .dropdown-menu li a {
+  color: var(--color-text-dark);
+}
+
+body.dark .dropdown-menu li a:hover {
+  background-color: var(--color-primary-dark);
+}

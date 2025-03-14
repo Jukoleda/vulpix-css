@@ -1,0 +1,25 @@
+/* Acordeón */
+.accordion-header {
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  text-align: left;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #0056b3;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.accordion-content.active {
+  display: block;
+}

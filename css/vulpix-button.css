@@ -1,0 +1,134 @@
+/* ------------------------
+   Botones Base
+------------------------ */
+button,
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+button:disabled,
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ------------------------
+   Variantes de Botón
+------------------------ */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover, #005bb5);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-hover, #555);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-text {
+  background: none;
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+}
+
+.btn-text:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------
+   Tamaños de Botón
+------------------------ */
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.btn-lg {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+
+/* ------------------------
+   Botón Redondeado
+------------------------ */
+.btn-round {
+  border-radius: 50px;
+}
+
+/* ------------------------
+   Botón Icono
+------------------------ */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-icon:hover {
+  background-color: var(--color-primary-hover, #005bb5);
+}
+
+body.dark .btn-primary {
+  background-color: var(--color-primary-dark);
+}
+
+body.dark .btn-outline {
+  border-color: var(--color-primary-dark);
+  color: var(--color-primary-dark);
+}
+
+body.dark .btn-outline:hover {
+  background-color: var(--color-primary-dark);
+  color: #fff;
+}
+
+.btn {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

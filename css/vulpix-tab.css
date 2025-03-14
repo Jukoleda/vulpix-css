@@ -1,0 +1,103 @@
+/* ------------------------------
+   Estilos generales
+------------------------------ */
+
+:root {
+  --color-primary: #007bff;
+  --color-primary-light: #66b2ff;
+  --color-bg: #ffffff;
+  --color-text: #333333;
+}
+
+body.dark {
+  --color-primary: #66b2ff;
+  --color-primary-dark: #3399ff;
+  --color-bg-dark: #333333;
+  --color-text-dark: #f1f1f1;
+}
+/* ------------------------------
+   Estilos generales
+------------------------------ */
+.tabs {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.tab-titles {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab-title {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tab-title:hover {
+  background-color: var(--color-primary-light);
+  transform: scale(1.1);
+}
+
+.tab-title.active {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* ------------------------------
+     Contenido de las Tabs con animación
+  ------------------------------ */
+.tab-content {
+  padding: 2rem 0;
+  position: relative;
+}
+
+.tab-panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.tab-panel.active {
+  display: block;
+  opacity: 1;
+}
+
+/* ------------------------------
+     Modo oscuro
+  ------------------------------ */
+body.dark .tab-title {
+  color: var(--color-text-dark);
+}
+
+body.dark .tab-title.active {
+  background-color: var(--color-primary-dark);
+  color: #fff;
+}
+
+body.dark .tab-title:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.tab-panel {
+  display: none;
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.tab-panel.active {
+  display: block;
+  transform: translateX(0);
+  opacity: 1;
+}
